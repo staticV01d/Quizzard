@@ -1,15 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+namespace Quizzard;
 
-namespace Quizzard
+internal class Data
 {
-  internal class Data
-  {
 #pragma warning disable IDE0090 // Use 'new(...)'
-    public static List<Dictionary<string, string>> questionData = new List<Dictionary<string, string>>()
+    public static List<Dictionary<string, string>> computerMedium = new List<Dictionary<string, string>>()
 #pragma warning restore IDE0090 // Use 'new(...)'
     {
         new Dictionary<string, string>()
@@ -64,5 +58,5 @@ namespace Quizzard
             { "answer", "False" }
         }
     };
-  }
 }
+
