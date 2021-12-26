@@ -839,49 +839,49 @@ internal class Data
     }
   };
   #region
-  public static List<Dictionary<string, string>> musicHard = new List<Dictionary<string, string>>()
-  {
-    new Dictionary<string, string>()
-    {
+  //public static List<Dictionary<string, string>> musicHard = new List<Dictionary<string, string>>()
+  //{
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    }
-  };
+  //  }
+  //};
   #endregion
 
   #region
@@ -1125,49 +1125,49 @@ internal class Data
     }
   };
   #region
-  public static List<Dictionary<string, string>> genHard = new List<Dictionary<string, string>>()
-  {
-    new Dictionary<string, string>()
-    {
+  //public static List<Dictionary<string, string>> genHard = new List<Dictionary<string, string>>()
+  //{
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    },
-    new Dictionary<string, string>()
-    {
+  //  },
+  //  new Dictionary<string, string>()
+  //  {
 
-    }
-  };
+  //  }
+  //};
   #endregion
 
 #pragma warning restore IDE0090 // Use 'new(...)'

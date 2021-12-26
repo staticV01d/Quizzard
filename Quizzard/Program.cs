@@ -9,112 +9,143 @@ List<Question> questions = new List<Question>();
 //{
 //    questions.Add(new Question(question["text"], question["answer"]));
 //}
-var categories = "";
 
-foreach (var c in QuizBrain.Categories)
+bool verifyInput = false;
+
+while (!verifyInput)
 {
-  categories += c + ", ";
+  var categories = "";
+
+  foreach (var c in QuizBrain.Categories)
+  {
+    categories += c + ", ";
+  }
+
+  categories = categories.TrimEnd(',',' ');
+
+  var category = Input($"What category quiz would you like to take? \n({categories})").ToLower();
+
+  var difficultyList = QuizBrain.GetDifficulties(category);
+  var difficulties = "";
+
+  foreach (var d in difficultyList)
+  {
+    difficulties += d + ", ";
+  }
+  // TODO: Get This working (Put the right stuff in the right place)
+  difficulties = difficulties.TrimEnd(',',' ');
+
+  var difficulty = Input($"What difficulty? ({difficulties})");
+  if (category == "computers")
+  {
+    if (difficulty == "easy")
+    {
+      questions.SetQuestions(Data.computerEasy);
+      verifyInput = true;
+    }
+    else if (difficulty == "medium")
+    {
+      questions.SetQuestions(Data.computerMedium);
+      verifyInput = true;
+    }
+  }
+  //else if (category == "math")
+  //{
+  //  if (difficulty == "easy")
+  //    Print("");
+  //  else if (difficulty == "medium")
+  //    Print("");
+  //  else if (difficulty == "hard")
+  //    Print("");
+  //}
+  else if (category == "video games")
+  {
+    if (difficulty == "easy")
+    {
+      questions.SetQuestions(Data.videoGamesEasy);
+      verifyInput = true;
+    }
+    else if (difficulty == "medium")
+    {
+      questions.SetQuestions(Data.videoGamesMedium);
+      verifyInput = true;
+    }
+    else if (difficulty == "hard")
+    {
+      questions.SetQuestions(Data.videoGamesHard);
+      verifyInput = true;
+    }
+  }
+  //else if (category == "mythology")
+  //{
+  //  if (difficulty == "easy")
+  //    Print("");
+  //  else if (difficulty == "medium")
+  //    Print("");
+  //  else if (difficulty == "hard")
+  //    Print("");
+  //}
+  else if (category == "history")
+  {
+    if (difficulty == "easy")
+    {
+      questions.SetQuestions(Data.historyEasy);
+      verifyInput = true;
+    }
+    else if (difficulty == "medium")
+    {
+      questions.SetQuestions(Data.historyMedium);
+      verifyInput = true;
+    }
+    else
+      Print("Difficulty setting not available");
+  }
+  else if (category == "music")
+  {
+    if (difficulty == "easy")
+    {
+      questions.SetQuestions(Data.musicEasy);
+      verifyInput = true;
+    }
+    else if (difficulty == "medium")
+    {
+      questions.SetQuestions(Data.musicMedium);
+      verifyInput = true;
+    }
+    else
+      Print("Difficulty setting not available");
+  }
+  //else if (category == "cars")
+  //{
+  //  if (difficulty == "easy")
+  //    Print("");
+  //  else if (difficulty == "medium")
+  //    Print("");
+  //  else if (difficulty == "hard")
+  //    Print("");
+  //}
+  else if (category == "general")
+  {
+    if (difficulty == "easy")
+    {
+      questions.SetQuestions(Data.genEasy);
+      verifyInput = true;
+    }
+    else if (difficulty == "medium")
+    {
+      questions.SetQuestions(Data.genMedium);
+      verifyInput = true;
+    }
+    else
+      Print("Difficulty setting not available");
+  }
+  else
+    Print("Category not available");
 }
 
-categories = categories.Remove(categories.Length - 2);
-
-var category = Input($"What category quiz would you like to take? \n({categories})").ToLower();
-
-var difficultyList = QuizBrain.GetDifficulties(category);
-var difficulties = "";
-
-foreach (var d in difficultyList)
-{
-  difficulties += d + ", ";
-}
-
-difficulties = difficulties.Remove(difficulties.Length - 2);
-
-var difficulty = Input($"What difficulty? ({difficulties})");
-
-if (category == "computers")
-{
-  if (difficulty == "easy")
-    questions.SetQuestions(Data.computerEasy);
-  else if (difficulty == "medium")
-    questions.SetQuestions(Data.computerMedium);
-  else { /*Unavailable*/ }
-
-}
-else if (category == "math")
-{
-  if (difficulty == "easy")
-    Print("");
-  else if (difficulty == "medium")
-    Print("");
-  else if (difficulty == "hard")
-    Print("");
-
-}
-else if (category == "video games")
-{
-  if (difficulty == "easy")
-    Print("");
-  else if (difficulty == "medium")
-    Print("");
-  else if (difficulty == "hard")
-    Print("");
-}
-else if (category == "mythology")
-{
-  if (difficulty == "easy")
-    Print("");
-  else if (difficulty == "medium")
-    Print("");
-  else if (difficulty == "hard")
-    Print("");
-}
-else if (category == "history")
-{
-  if (difficulty == "easy")
-    Print("");
-  else if (difficulty == "medium")
-    Print("");
-  else if (difficulty == "hard")
-    Print("");
-}
-else if (category == "music")
-{
-  if (difficulty == "easy")
-    Print("");
-  else if (difficulty == "medium")
-    Print("");
-  else if (difficulty == "hard")
-    Print("");
-}
-else if (category == "cars")
-{
-  if (difficulty == "easy")
-    Print("");
-  else if (difficulty == "medium")
-    Print("");
-  else if (difficulty == "hard")
-    Print("");
-}
-else if (category == "general")
-{
-  if (difficulty == "easy")
-    Print("");
-  else if (difficulty == "medium")
-    Print("");
-  else if (difficulty == "hard")
-    Print("");
-}
-else
-{
-  if (difficulty == "easy")
-    Print("");
-  else if (difficulty == "medium")
-    Print("");
-  else if (difficulty == "hard")
-    Print("");
-}
-
+Console.Clear();
+Console.WriteLine("Let's begin!");
+Console.WriteLine(Environment.NewLine);
 var quizmaster = new QuizBrain(questions);
 
 
